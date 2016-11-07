@@ -1,0 +1,16 @@
+galaxy_info:
+  author: {{cookiecutter.full_name}}
+  description: {{cookiecutter.description}}
+
+  license: license (Apache)
+
+  min_ansible_version: 2.3
+  
+  platforms:
+  - name: FreeBSD
+    versions:
+    - 11
+
+  galaxy_tags: []
+
+dependencies: []

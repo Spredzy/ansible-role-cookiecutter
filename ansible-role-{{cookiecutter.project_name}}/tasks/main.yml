@@ -1,0 +1,19 @@
+---
+- name: Include OS-specific variables
+  include_vars: {% raw %}'{{ ansible_os_family }}.yml'{% endraw %}
+
+
+- name: Install the {{cookiecutter.project_name}} package
+  package:
+    name: {% raw %}'{{{% endraw %} {{cookiecutter.project_name}}_package_name {% raw %}}}'{% endraw %}
+
+
+- name: Include OS-specific actions
+  include: {% raw %}'{{ ansible_os_family }}.yml'{% endraw %}
+
+
+- name: Start {{cookiecutter.project_name}}
+  service:
+    name: {% raw %}'{{{% endraw %} {{cookiecutter.project_name}}_service_name {% raw %}}}'{% endraw %}
+    state: started
+    enabled: yes

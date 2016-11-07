@@ -1,0 +1,11 @@
+---
+- name: reload {{cookiecutter.project_name}}
+  service:
+    name: {% raw %}'{{ {% endraw %}{{cookiecutter.project_name}}_service_name {% raw %}}}'{% endraw %}
+    state: reloaded
+
+
+- name: restart {{cookiecutter.project_name}}
+  service:
+    name: {% raw %}'{{ {% endraw %}{{cookiecutter.project_name}}_service_name {% raw %}}}'{% endraw %}
+    state: restarted

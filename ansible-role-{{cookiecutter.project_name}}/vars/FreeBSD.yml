@@ -1,0 +1,4 @@
+---
+{{cookiecutter.project_name}}_configuration_file_path: /usr/local/etc/{{cookiecutter.project_name}}.conf
+{{cookiecutter.project_name}}_package_name: {{cookiecutter.project_name}}
+{{cookiecutter.project_name}}_service_name: {{cookiecutter.project_name}}
